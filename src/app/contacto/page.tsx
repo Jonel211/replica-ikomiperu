@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <div className="py-12 md:py-16 bg-slate-50 min-h-screen">
+    <div className="py-12 md:py-16 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="CONTÁCTENOS"
@@ -22,7 +22,7 @@ export default function ContactoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Interactive Map & Physical details (6 cols) */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden">
+            <div className="bg-white w-full">
               {/* Map embed iframe */}
               <div className="w-full h-80 sm:h-96 relative">
                 <iframe
@@ -36,62 +36,6 @@ export default function ContactoPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full"
                 />
-              </div>
-
-              {/* Physical Office Card */}
-              <div className="p-6 bg-white space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm text-slate-900">
-                      Dirección Comercial y Despacho
-                    </h4>
-                    <p className="text-xs text-slate-600 mt-0.5">
-                      Av. Nicolás Ayllón Nro. 3384, Int. 298, Coop. Viv. 27 de Abril (Altura Paradero Rayovac), Ate, Lima.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <Phone className="w-4 h-4 text-ikomi-blue" />
-                    <div>
-                      <span className="block text-[11px] text-slate-400 font-semibold uppercase">
-                        Central WhatsApp
-                      </span>
-                      <a
-                        href="tel:985068416"
-                        className="text-xs font-bold text-slate-800 hover:text-ikomi-blue"
-                      >
-                        985 068 416
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2.5">
-                    <Mail className="w-4 h-4 text-ikomi-blue" />
-                    <div>
-                      <span className="block text-[11px] text-slate-400 font-semibold uppercase">
-                        Correo de Ventas
-                      </span>
-                      <a
-                        href="mailto:ventas@ikomiperu.com"
-                        className="text-xs font-bold text-slate-800 hover:text-ikomi-blue"
-                      >
-                        ventas@ikomiperu.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5 pt-4 border-t border-slate-100 text-xs text-slate-600">
-                  <Clock className="w-4 h-4 text-amber-600 flex-shrink-0" />
-                  <span>
-                    <strong>Horario:</strong> Lunes a Viernes 8:00 am - 6:00 pm | Sábados 8:00 am - 1:00 pm
-                  </span>
-                </div>
               </div>
             </div>
           </div>

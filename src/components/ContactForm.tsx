@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md border border-slate-200 p-6 sm:p-8">
+    <div className="w-full max-w-2xl mx-auto bg-white">
       {submitted ? (
         <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-6 text-center animate-in fade-in zoom-in duration-300">
           <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto mb-3" />
@@ -62,14 +62,8 @@ export function ContactForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label
-              htmlFor="fullName"
-              className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1"
-            >
-              Apellidos y Nombres *
-            </label>
             <input
               type="text"
               id="fullName"
@@ -77,102 +71,69 @@ export function ContactForm() {
               required
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="Ej: Juan Pérez Morales"
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-ikomi-blue focus:border-transparent text-sm transition-all"
+              placeholder="Apellidos y Nombres"
+              className="w-full px-3 py-2 rounded-[4px] border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all"
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1"
-              >
-                Teléfono / WhatsApp *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Ej: 985 068 416"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-ikomi-blue focus:border-transparent text-sm transition-all"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1"
-              >
-                Correo Electrónico *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Ej: cliente@empresa.com"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-ikomi-blue focus:border-transparent text-sm transition-all"
-              />
-            </div>
+          <div>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Teléfono"
+              className="w-full px-3 py-2 rounded-[4px] border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all"
+            />
           </div>
 
           <div>
-            <label
-              htmlFor="subject"
-              className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1"
-            >
-              Asunto / Repuesto de interés
-            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Correo"
+              className="w-full px-3 py-2 rounded-[4px] border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all"
+            />
+          </div>
+
+          <div>
             <input
               type="text"
               id="subject"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              placeholder="Ej: Cotización de kit de embrague para Hyundai HD78"
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-ikomi-blue focus:border-transparent text-sm transition-all"
+              placeholder="Asunto"
+              className="w-full px-3 py-2 rounded-[4px] border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="message"
-              className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1"
-            >
-              Mensaje / Detalle de la consulta *
-            </label>
             <textarea
               id="message"
               name="message"
-              rows={4}
+              rows={5}
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder="Indique la marca, modelo de camión, año de fabricación y las piezas requeridas..."
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-ikomi-blue focus:border-transparent text-sm transition-all resize-y"
+              placeholder="Mensaje"
+              className="w-full px-3 py-2 rounded-[4px] border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all resize-y"
             />
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-ikomi-red hover:bg-red-700 text-white font-bold text-sm uppercase tracking-wider rounded-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50"
+              className="px-6 py-2 bg-[#df3844] hover:bg-red-700 text-white font-medium text-sm rounded-[4px] transition-colors duration-200 disabled:opacity-50"
             >
-              {isSubmitting ? (
-                <span>Enviando mensaje...</span>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  <span>Enviar Mensaje</span>
-                </>
-              )}
+              {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
             </button>
           </div>
         </form>

@@ -12,9 +12,8 @@ interface ProductCardProps {
 export function ProductCard({ product, featured = false }: ProductCardProps) {
   return (
     <article
-      className={`group relative bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1.5 ${
-        featured ? "ring-2 ring-ikomi-blue" : ""
-      }`}
+      className={`group relative bg-white rounded-md overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1.5 ${featured ? "ring-2 ring-ikomi-blue" : ""
+        }`}
     >
       <div>
         {/* Image Container with next/image */}

@@ -15,31 +15,26 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white min-h-[520px] md:min-h-[580px] flex items-center">
-      {/* Background with gradient and overlay */}
+      {/* Background with full color and clarity */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 filter grayscale contrast-125 scale-105 transition-transform duration-1000 ease-out"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-out"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: "url('/hero.png')",
         }}
       />
-      {/* Radial and angular gradients to match IKOMI aesthetic */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+
+      {/* Soft overlays to maintain text readability without hiding the image */}
+      <div className="absolute inset-0 bg-slate-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-transparent" />
 
       {/* Decorative slant border */}
       <div className="absolute -bottom-1 left-0 right-0 h-8 bg-white transform -skew-y-1 origin-bottom-right" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ikomi-red/20 border border-ikomi-red/40 text-red-300 text-xs font-semibold mb-6 uppercase tracking-wider backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-ikomi-red animate-pulse" />
-            Especialistas en Camiones y Buses
-          </div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase drop-shadow-md">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none uppercase drop-shadow-md">
             {title.includes("REPUESTOS EN GENERAL") ? (
               <>
                 <span className="text-white block">REPUESTOS EN GENERAL</span>

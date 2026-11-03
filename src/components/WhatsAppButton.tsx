@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { MessageCircle, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import Image from "next/image"; // Opcional si usas Next.js
 
 export function WhatsAppButton() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -41,9 +42,13 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a IKOMI Perú por WhatsApp"
-        className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-400 group"
+        className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20ba59] flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-400 group"
       >
-        <MessageCircle className="w-7 h-7 fill-current" />
+        <img
+          src="/icons/whatsapp.png"
+          alt="WhatsApp"
+          className="w-7 h-7 object-contain invert brightness-200"
+        />
         <span className="sr-only">Contactar por WhatsApp</span>
       </a>
     </aside>

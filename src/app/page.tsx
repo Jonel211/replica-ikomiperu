@@ -118,25 +118,20 @@ export default function HomePage() {
             {SERVICIOS.slice(0, 2).map((srv) => (
               <div
                 key={srv.id}
-                className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {srv.title}
-                </h3>
-                <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                  {srv.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {srv.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs text-slate-700">
-                      <span className="w-1.5 h-1.5 rounded-full bg-ikomi-red" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    {srv.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+                    {srv.description}
+                  </p>
+                </div>
+
                 <Link
                   href="/servicios"
-                  className="text-xs font-bold text-ikomi-blue hover:text-ikomi-red inline-flex items-center gap-1 transition-colors"
+                  className="text-xs font-bold text-ikomi-blue hover:text-ikomi-red inline-flex items-center gap-1 transition-colors mt-auto"
                 >
                   <span>Conocer más servicios</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -148,12 +143,12 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-14 bg-ikomi-header text-white">
+      <section className="py-14 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-wide text-ikomi-blue">
             ¿Buscas un repuesto específico para tu camión?
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-200 max-w-xl mx-auto">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
             Nuestro equipo de ventas técnicas consulta catálogos por número de chasis o muestra física en Lima.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -166,7 +161,7 @@ export default function HomePage() {
             </Link>
             <a
               href="tel:985068416"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold px-6 py-3 rounded-lg border border-slate-300 shadow-sm transition-colors"
             >
               <span>Llamar al 985 068 416</span>
             </a>

@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     ],
     price: "S/. 480.00",
     inStock: true,
-    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "PROD-002",

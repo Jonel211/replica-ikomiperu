@@ -51,9 +51,8 @@ export default function NosotrosPage() {
           {CORPORATE_CARDS.map((card, idx) => (
             <div
               key={card.title}
-              className={`bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
-                idx === 3 ? "md:col-span-2 lg:col-span-1" : ""
-              }`}
+              className={`bg-white shadow-md border border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${idx === 3 ? "md:col-span-2 lg:col-span-1" : ""
+                }`}
             >
               {/* Header bar matching screenshot styling (#4a4d52) */}
               <div className="bg-[#4d5156] text-white py-3 px-4 text-center">
@@ -82,10 +81,10 @@ export default function NosotrosPage() {
         </div>
 
         {/* Corporate Mission, Vision & Values */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+        <div className="bg-white shadow-sm border border-slate-200 p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-ikomi-blue/10 text-ikomi-blue flex items-center justify-center">
+              <div className="w-12 h-12 bg-ikomi-blue/10 text-ikomi-blue flex items-center justify-center">
                 <Target className="w-6 h-6" />
               </div>
               <h4 className="text-xl font-bold text-slate-900">Nuestra Misión</h4>
@@ -95,7 +94,7 @@ export default function NosotrosPage() {
             </div>
 
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-ikomi-red/10 text-ikomi-red flex items-center justify-center">
+              <div className="w-12 h-12 bg-ikomi-red/10 text-ikomi-red flex items-center justify-center">
                 <Award className="w-6 h-6" />
               </div>
               <h4 className="text-xl font-bold text-slate-900">Nuestra Visión</h4>
@@ -105,7 +104,7 @@ export default function NosotrosPage() {
             </div>
 
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 flex items-center justify-center">
                 <Users className="w-6 h-6" />
               </div>
               <h4 className="text-xl font-bold text-slate-900">Nuestros Valores</h4>

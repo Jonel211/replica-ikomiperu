@@ -90,7 +90,7 @@ export function Footer() {
           {/* Column 2: White Info Cards (6 cols) */}
           <div className="lg:col-span-6 space-y-4">
             {/* Top wide card: Dirección */}
-            <div className="bg-white text-slate-900 rounded-xl p-6 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
+            <div className="bg-white text-slate-900 rounded-sm p-6 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
               <div className="w-12 h-12 rounded-full border-2 border-red-500/20 bg-red-50 text-red-600 flex items-center justify-center mb-3">
                 <MapPin className="w-6 h-6" />
               </div>
@@ -101,13 +101,16 @@ export function Footer() {
                 Avenida Nicolás Ayllón 3384
               </p>
               <p className="text-xs text-slate-500">
-                Carretera Central - Paradero Rayovac | Lima - Ate
+                Carretera Central - Paradero Rayovac
+              </p>
+              <p className="text-xs text-slate-500 mt-1">
+                Lima - Ate
               </p>
             </div>
 
             {/* Bottom 2 side-by-side cards: Correo y Teléfonos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white text-slate-900 rounded-xl p-5 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
+              <div className="bg-white text-slate-900 rounded-sm p-5 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
                 <div className="w-11 h-11 rounded-full border-2 border-red-500/20 bg-red-50 text-red-600 flex items-center justify-center mb-2.5">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -123,7 +126,7 @@ export function Footer() {
                 <span className="text-[11px] text-slate-400">Atención corporativa</span>
               </div>
 
-              <div className="bg-white text-slate-900 rounded-xl p-5 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
+              <div className="bg-white text-slate-900 rounded-sm p-5 shadow-md text-center border border-slate-100 flex flex-col items-center justify-center">
                 <div className="w-11 h-11 rounded-full border-2 border-red-500/20 bg-red-50 text-red-600 flex items-center justify-center mb-2.5">
                   <Phone className="w-5 h-5" />
                 </div>
