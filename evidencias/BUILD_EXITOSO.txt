@@ -1,0 +1,69 @@
+================================================================================
+                    REPORTE DE BUILD EXITOSO - NEXT.JS APP ROUTER
+                 Proyecto: ikomi-next-villanueva (IKOMI PERU S.R.L.)
+================================================================================
+Fecha de compilación: 2026-11-03
+Comando ejecutado: npm run build
+Versión de Next.js: 14.2.35
+Estado de compilación: EXITOSO (Exit Code: 0)
+
+--------------------------------------------------------------------------------
+TERMINAL OUTPUT:
+--------------------------------------------------------------------------------
+
+> ikomi-next-villanueva@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/15) ...
+   Generating static pages (3/15) 
+   Generating static pages (7/15) 
+   Generating static pages (11/15) 
+ ✓ Generating static pages (15/15)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                             Size     First Load JS
+┌ ○ /                                                   2.92 kB         104 kB
+├ ○ /_not-found                                         140 B          87.4 kB
+├ ○ /contacto                                           2.23 kB        89.5 kB
+├ ○ /marcas                                             140 B          87.4 kB
+├ ○ /nosotros                                           294 B          92.7 kB
+├ ○ /productos                                          3.01 kB         104 kB
+├ ● /productos/[slug]                                   186 B           101 kB
+├   ├ /productos/disco-embrague-hyundai-hd78
+├   ├ /productos/plato-presion-valeo-mitsubishi-canter
+├   ├ /productos/pastillas-freno-sangsin-isuzu-npr
+├   ├ /productos/corona-pinon-ataque-hino-dutro
+├   ├ /productos/bomba-principal-embrague-tcic-kia-k2700
+├   └ /productos/juego-zapatas-freno-hyundai-mighty
+└ ○ /servicios                                          177 B          96.1 kB
++ First Load JS shared by all                           87.3 kB
+  ├ chunks/117-905fadd7e2e1b826.js                      31.7 kB
+  ├ chunks/fd9d1056-cce117dc4e21e608.js                 53.6 kB
+  └ other shared chunks (total)                         1.89 kB
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+--------------------------------------------------------------------------------
+ANÁLISIS DE RUTAS GENERADAS:
+--------------------------------------------------------------------------------
+1. Rutas Estáticas (○):
+   - / : Página de Inicio con Hero, Garantías, Productos Destacados y Marcas.
+   - /_not-found : Página 404 personalizada con enlaces de navegación segura.
+   - /contacto : Formulario y visualización de ubicación física en Ate.
+   - /marcas : Catálogo institucional de marcas de Corea y Japón.
+   - /nosotros : Módulos de Equipo, Almacén, Tienda y Empresa.
+   - /productos : Catálogo con filtrado por categoría interactivo.
+   - /servicios : 4 módulos oscuros con iconos lineales y ventajas.
+
+2. Rutas Dinámicas SSG (●):
+   - /productos/[slug] : Pre-renderizado completo de las 6 páginas de repuestos
+     mediante generateStaticParams() y generateMetadata().
+================================================================================
