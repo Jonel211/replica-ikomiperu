@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MARCAS } from "@/data/marcas";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 
@@ -39,21 +40,25 @@ export function BrandsCarousel() {
                 key={marca.id}
                 onMouseEnter={() => setSelectedBrand(marca.id)}
                 onMouseLeave={() => setSelectedBrand(null)}
-                className={`group relative bg-slate-800/80 hover:bg-slate-800 border rounded-xl p-4 text-center cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl ${
+                className={`group relative bg-slate-800/90 hover:bg-slate-800 border rounded-sm p-3.5 text-center cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl ${
                   isSelected
                     ? "border-ikomi-gold shadow-lg shadow-amber-500/10 scale-105"
                     : "border-slate-700/80 hover:border-slate-500"
                 }`}
               >
-                <div className="h-10 flex items-center justify-center">
-                  <span className="font-black text-sm sm:text-base tracking-tight text-white group-hover:text-ikomi-gold transition-colors">
-                    {marca.logoText}
-                  </span>
+                <div className="h-12 bg-white rounded-sm p-2 flex items-center justify-center mb-2 shadow-sm">
+                  <Image
+                    src={marca.logo}
+                    alt={marca.name}
+                    width={marca.logoWidth}
+                    height={marca.logoHeight}
+                    className="max-h-8 w-auto object-contain"
+                  />
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1 font-medium truncate">
-                  {marca.badge}
+                <p className="text-[11px] text-slate-300 font-semibold truncate">
+                  {marca.name}
                 </p>
-                <span className="inline-block mt-2 text-[10px] text-slate-500 font-mono">
+                <span className="inline-block mt-1 text-[10px] text-slate-400 font-mono">
                   {marca.country}
                 </span>
               </div>
