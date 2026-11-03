@@ -23,8 +23,8 @@ Siga los siguientes pasos en la terminal:
 
 ```bash
 # 1. Clonar el repositorio
-git clone <URL_DEL_REPOSITORIO>
-cd examen3
+git clone https://github.com/Jonel211/replica-ikomiperu.git
+cd replica-ikomiperu
 
 # 2. Instalar dependencias
 npm install
@@ -123,6 +123,7 @@ graph TD
 ## 📂 Estructura del Proyecto
 
 ```text
+replica-ikomiperu/
 ├── DECISIONES.md             # Justificaciones técnicas de arquitectura y diseño
 ├── BITACORA_IA.md            # Registro crítico de 6 interacciones con la IA y errores corregidos
 ├── README.md                 # Instrucciones, árbol de componentes y guía de despliegue

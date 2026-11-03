@@ -40,11 +40,10 @@ export function BrandsCarousel() {
                 key={marca.id}
                 onMouseEnter={() => setSelectedBrand(marca.id)}
                 onMouseLeave={() => setSelectedBrand(null)}
-                className={`group relative bg-slate-800/90 hover:bg-slate-800 border rounded-sm p-3.5 text-center cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl ${
-                  isSelected
+                className={`group relative bg-slate-800/90 hover:bg-slate-800 border rounded-sm p-3.5 text-center cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl ${isSelected
                     ? "border-ikomi-gold shadow-lg shadow-amber-500/10 scale-105"
                     : "border-slate-700/80 hover:border-slate-500"
-                }`}
+                  }`}
               >
                 <div className="h-12 bg-white rounded-sm p-2 flex items-center justify-center mb-2 shadow-sm">
                   <Image
@@ -58,9 +57,6 @@ export function BrandsCarousel() {
                 <p className="text-[11px] text-slate-300 font-semibold truncate">
                   {marca.name}
                 </p>
-                <span className="inline-block mt-1 text-[10px] text-slate-400 font-mono">
-                  {marca.country}
-                </span>
               </div>
             );
           })}

@@ -213,20 +213,3 @@
 ## 3. Reflexión Crítica sobre el Uso de IA (Parte 5.3)
 
 > *Gracias a la Inteligencia Artificial pude acelerar notablemente la maquetación repetitiva de componentes en Tailwind CSS y la estructuración inicial de datos técnicos automotrices tipados en TypeScript. Sin embargo, tuve que razonar de manera completamente autónoma la arquitectura real del App Router de Next.js 14, ya que la IA mezclaba frecuentemente conceptos del Pages Router clásico (como `useRouter` de `next/router`, `getStaticProps` o enlaces sin directiva `"use client"`). Comprendí que la IA es un copiloto de autocompletado y aceleración, pero el criterio de diseño, la coherencia de estilos y la resolución de errores en el ciclo de compilación corresponden enteramente al criterio del desarrollador.*
-
----
-
-## 4. Guía para la Sustentación en Vivo (5 minutos - Parte 5.4)
-
-El docente evaluará la capacidad de explicar y realizar cambios rápidos en vivo:
-
-1. **Cómo agregar una nueva ruta (por ejemplo `/blog`):**  
-   * Crear la carpeta `src/app/blog/` y dentro el archivo `page.tsx`.
-   * Exportar una función por defecto con su título y contenido.
-   * Agregar el enlace en el array `NAV_ITEMS` dentro de `src/components/Navbar.tsx` y en el `Footer.tsx`.
-2. **Cómo añadir una prop al componente `ProductCard` (por ejemplo `showBadge?: boolean`):**  
-   * Modificar la interfaz `interface ProductCardProps` en `src/components/ProductCard.tsx` para agregar `showBadge?: boolean`.
-   * Renderizar condicionalmente una etiqueta visual: `{showBadge && <span className="bg-ikomi-gold text-slate-900">NUEVO</span>}`.
-3. **Cómo cambiar el color principal del tema:**  
-   * Abrir `tailwind.config.ts` y modificar la clave `colors.ikomi.blue.DEFAULT` o `colors.ikomi.red.DEFAULT`.
-   * Al guardar, Tailwind y Next.js actualizarán automáticamente todos los componentes que usen `bg-ikomi-blue`, `text-ikomi-blue`, etc.
